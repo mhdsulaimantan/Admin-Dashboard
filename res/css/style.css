@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('/res/font/Roboto-Medium.ttf') format('tff');
+}
+
+body {
+    margin: 0;
+    font-family: 'roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #adb0b092;
+}
+
+.container {
+    display: grid;
+    grid-template: auto 1fr / 18rem 1fr;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    font-size: 1.8rem;
+    background-color: rgb(50, 180, 255);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}
+
+.header {
+    grid-column: 2 / 3;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    background-color: whitesmoke;
+}
+
+.main {
+    grid-column: 2;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 18rem;
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.logo svg {
+    width: 3rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    color: whitesmoke;
+    margin: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    column-gap: 0.6rem;
+    font-size: 1rem;
+}
+
+.sidebar ul li svg {
+    width: 1.5rem;
+}
+
+.header .left-top-side {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header svg {
+    width: 1.8rem;
+}
+
+.header .search-bar {
+    width: 80%;
+    background-color: rgba(128, 128, 128, 0.443);
+    border-radius: 2rem;
+    height: 1.5rem;
+}
+
+.header .right-top-side {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .profile-img {
+    border-radius: 5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.header .profile-name {
+    grid-column: 2;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.header .left-down-side {
+    grid-row: 2;
+    display: flex;
+    justify-self: start;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.header .left-down-side img {
+    grid-row: 1 / -1;
+    border-radius: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 0.1rem;
+}
+
+.header .greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .greeting .hi {
+    font-size: 0.8rem;
+}
+
+.header .greeting .username {
+    font-size: 1.2rem;
+}
+
+.header .right-down-side {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.header .right-down-side button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5rem;
+    border-style: none;
+    background-color: rgb(50, 180, 255);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.main .projects {
+    grid-column: 1 / 2;
+}
+
+.main .cards-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.main .cards-container .card {
+    width: clamp(20%, 80%, 100%);
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    border-left: thick solid #f19d37;
+}
+
+.main .cards-container .card .card-description,
+.main .ann-cards-container .ann-card .card-description {
+    font-size: small;
+    color: gray;
+}
+
+.main .cards-container .card .icons {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.main .cards-container .card svg {
+    width: 1.5rem;
+}
+
+.main .side-container {
+    grid-column: 2;
+}
+
+.main .ann-cards-container,
+.main .trending .trend-container {
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 15rem;
+}
+
+.main .trending .trend-container .trend {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main .trending .trend-container .trend .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .trending .trend-container .trend .trend-img {
+    width: 3.2rem;
+    border-radius: 2rem;
+}
+
+.main .trending .trend-container .trend .user-info .username {
+    font-size: medium;
+}
+
+.main .trending .trend-container .trend .user-info .role {
+    font-size: x-small;
+    color: gray;
+}
